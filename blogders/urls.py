@@ -16,13 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
+from django.conf.urls import url
 from django.conf import settings
-from ders.views import index, about
+from ders.views import index, about, contact
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     path('', index, name='index'),
-    path('about/', about, name='about')
+    url(r'^about/$', about, name='about'),
+    url(r'^contact/$', contact, name='contact'),
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,19 +1,21 @@
- <body id="page-top">
+{% load static%}
+ <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico'%}" />
+<body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="{% url 'index' %}">Robotik Kodlama</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">Hakkımızda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'contact'%}">İletişim</a></li>
                     </ul>
+
                 </div>
             </div>
         </nav>
+
 
 
 {% include 'header.html'%}
@@ -23,7 +25,14 @@
 {% endblock content %}
 
 {% include 'footer.html'%}
-         <footer class="bg-light py-5">
-                 <a href="#" class="btn"><i class="fab fa-instagram"></i></a>
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+         <footer class="bg-light py-2">
+
+             <div class="container">
+                 <div class="row">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.329467993496!2d31.60063717573167!3d40.732775336343984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d3f0af37722e1%3A0xa7626ff2c0baa0e3!2sMinecraft%20Bolu!5e0!3m2!1str!2str!4v1692099195139!5m2!1str!2str" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+             </div>
+           
+
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Bolu Robotik Kodlama</div></div>
         </footer>

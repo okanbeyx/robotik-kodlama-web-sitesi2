@@ -13,8 +13,12 @@ class Card(models.Model):
     title1 = models.CharField(max_length=150)
     image = models.ImageField(blank=True, null=True, upload_to='cards/', verbose_name='image')
 
-
-class About(models.Model):
-
     def __str__(self):
         return self.title
+
+
+class Yazi(models.Model):
+    text = models.TextField(max_length=3000, null=False, blank=False)
+
+    def __str__(self):
+        return self.text

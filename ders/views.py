@@ -14,6 +14,15 @@ def index(request):
 
 
 def about(request):
-    context = dict()
+
+    yazi = Yazi.objects.all()
     templates = 'about.html'
+    return render(request, templates, {
+        'yazi': yazi
+    })
+
+
+def contact(request):
+    context = dict()
+    templates = 'contact.html'
     return render(request, templates, context)
